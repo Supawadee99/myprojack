@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Freelancer - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles.css">
+    </head><br><br><br><br><br><br><br>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Proflie</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html">Portfolio</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="java.html">JAVA</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="API.html">API</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<style>
+    body {
+        /* font-family: Arial, sans-serif; */
+        /* text-align: center; */
+        /* margin: 50px; */
+        border-radius: 50%;
+        background-color: aquamarine;
+    }
+    .box {
+        border-radius: 50%;
+        background-color: rgb(229, 205, 69);  
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top">Proflie</a>
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html">Portfolio</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="java.html">JAVA</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="API.html">API</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<center>
+<!-- Page content -->
+<div class="w3-content w3-padding-64 w3-margin-top" style="max-width:1564px">
+    <h1>เครื่องคำนวณเกรด</h1>
+    <p>กรุณากรอกคะแนนเพื่อคำนวณเกรด:</p>
+    
+    <label for="score">คะแนน: </label>
+    <input type="number" id="score" min="0" max="100" step="1">
+    <button onclick="calculateGrade()">คำนวณ</button>
+    
+    <p id="result"></p>
+    <hr>
+    <h2>เครื่องคำนวณดัชนีมวลกาย (BMI)</h2>
+
+    <label for="weight">น้ำหนัก (กก):</label>
+    <input type="number" id="weight" placeholder="ป้อนน้ำหนักในหน่วยกิโลกรัม" step="0.1" required><br><br>
+
+    <label for="height">ส่วนสูง (ซม):</label>
+    <input type="number" id="height" placeholder="ป้อนส่วนสูงในหน่วยเซนติเมตร" step="0.1" required><br><br>
+
+    <button onclick="calculateBMI()">คำนวณ BMI</button>
+
+    <h3>ผลลัพธ์ BMI:</h3>
+    <p id="bmiResult"></p>
+    <hr>
+    <h2>เครื่องคำนวณเส้นรอบวง</h2>
+
+    <label for="radius">รัศมี:</label>
+    <input type="number" id="radius" placeholder="ป้อนรัศมี" step="0.1" required><br><br>
+
+    <button onclick="calculateCircumference()">คำนวณเส้นรอบวง</button>
+
+    <h3>ผลลัพธ์ เส้นรอบวง:</h3>
+    <p id="circumferenceResult"></p>
+
+    <hr>
+    <h2>เครื่องคำนวณการบวก</h2>
+    <label for="num1">ตัวเลข 1:</label>
+    <input type="number" id="num1" placeholder="ป้อนตัวเลข" step="0.1" required><br><br>
+
+    <label for="num2">ตัวเลข 2:</label>
+    <input type="number" id="num2" placeholder="ป้อนตัวเลข" step="0.1" required><br><br>
+
+    <button onclick="calculateSum()">คำนวณผลรวม</button>
+
+    <h3>ผลลัพธ์ ผลรวม:</h3>
+    <p id="sumResult"></p>
+    <hr>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+   <br><br>
+<!-- End page content -->
+</div>
+<!-- Footer-->
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Location-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Location</h4>
+                <p class="lead mb-0">
+                    2215 John Daniel Drive
+                    <br />
+                    Clark, MO 65243
+                </p>
+            </div>
+            <!-- Footer Social Icons-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Around the Web</h4>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+            </div>
+            <!-- Footer About Text-->
+            <div class="col-lg-4">
+                <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                <p class="lead mb-0">
+                    Freelance is a free to use, MIT licensed Bootstrap theme created by
+                    <a href="http://startbootstrap.com">Start Bootstrap</a>
+                    .
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script>
+    const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+    const yValues = [55, 49, 44, 24, 15];
+    const barColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+    
+    new Chart("myChart", {
+      type: "pie",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "World Wide Wine Production 2018"
+        }
+      }
+    });
+    </script>
+       <script>
+        function calculateGrade() {
+          var score = parseFloat(document.getElementById('score').value);
+    
+          var grade = '';
+          if (score >= 80) {
+            grade = 'A';
+          } else if (score >= 70) {
+            grade = 'B';
+          } else if (score >= 60) {
+            grade = 'C';
+          } else if (score >= 50) {
+            grade = 'D';
+          } else {
+            grade = 'F';
+          }
+    
+          document.getElementById('result').innerHTML = 'คะแนน ' + score + ' ได้เกรด ' + grade;
+        }
+      </script>
+
+<script>
+    function calculateBMI() {
+        var weight = document.getElementById("weight").value;
+        var height = document.getElementById("height").value;
+
+        if (weight && height) {
+            var bmi = calculateBMIValue(weight, height);
+            displayBMIResult(bmi);
+        } else {
+            alert("โปรดป้อนน้ำหนักและส่วนสูง");
+        }
+    }
+
+    function calculateBMIValue(weight, height) {
+        var heightInMeters = height / 100;
+        return (weight / (heightInMeters * heightInMeters)).toFixed(2);
+    }
+
+    function displayBMIResult(bmi) {
+        var resultElement = document.getElementById("bmiResult");
+        resultElement.innerHTML = "ค่า BMI ของคุณคือ: " + bmi;
+    }
+</script>
+
+<script>
+    function calculateCircumference() {
+        var radius = document.getElementById("radius").value;
+
+        if (radius) {
+            var circumference = calculateCircumferenceValue(radius);
+            displayCircumferenceResult(circumference);
+        } else {
+            alert("โปรดป้อนรัศมี");
+        }
+    }
+
+    function calculateCircumferenceValue(radius) {
+        return (2 * Math.PI * radius).toFixed(2);
+    }
+
+    function displayCircumferenceResult(circumference) {
+        var resultElement = document.getElementById("circumferenceResult");
+        resultElement.innerHTML = "ค่าเส้นรอบวงของคุณคือ: " + circumference;
+    }
+</script>
+
+<script>
+    function calculateSum() {
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+
+        if (num1 && num2) {
+            var sum = calculateSumValue(num1, num2);
+            displaySumResult(sum);
+        } else {
+            alert("โปรดป้อนตัวเลขทั้งสอง");
+        }
+    }
+
+    function calculateSumValue(num1, num2) {
+        return (parseFloat(num1) + parseFloat(num2)).toFixed(2);
+    }
+
+    function displaySumResult(sum) {
+        var resultElement = document.getElementById("sumResult");
+        resultElement.innerHTML = "ผลลัพธ์ ผลรวม: " + sum;
+    }
+</script>
+
+<script>
+    const xValues1 = ["Italy", "France", "Spain", "USA", "Argentina"];
+    const yValues1 = [55, 49, 44, 24, 15];
+    const barColors1 = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+    
+    new Chart("myChart", {
+      type: "pie",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "World Wide Wine Production 2018"
+        }
+      }
+    });
+    </script>
+    </center>
+
+</body>
+</html>
+
